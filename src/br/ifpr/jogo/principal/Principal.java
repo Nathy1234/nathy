@@ -8,16 +8,17 @@ public class Principal extends JFrame {
     public Principal() {
         Fase fase = new Fase();
         super.add(fase);
+        super.setResizable(false);
         super.setVisible(true);
-        this.setSize(500, 500);
+        this.setSize(1000, 750);
         this.setTitle("Jogo da Nathy");
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 
     public static void main(String[] args) {
-        Principal principal = new Principal();
+        new Principal();
 
     }
 }

@@ -11,18 +11,14 @@ public class Fase extends JPanel {
     private Image imagemFundo;
 
     public Fase() {
-        ImageIcon carregando = new ImageIcon("recursos\\fundo.jpg");
+        ImageIcon carregando = new ImageIcon("recursos\\imagemfundo.jpg");
         this.imagemFundo = carregando.getImage();
-
-        this.personagem = new Personagem();
-        this.personagem.carregar();
     }
 
     public void paint(Graphics g) {
         Graphics2D graficos = (Graphics2D) g;
         graficos.drawImage(this.imagemFundo, 0, 0, null);
-        graficos.drawImage(this.imagemFundo, null, ALLBITS, ABORT);
+        g.dispose();
     }
-    
 
 }
